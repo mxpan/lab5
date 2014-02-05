@@ -5,6 +5,14 @@ $(document).ready(function() {
 	initializePage();
 })
 
+$('.friend h4 a').click(changeName);
+
+function changeName(event) {
+	event.preventDefault();
+	var currName = $(this).text();
+	$(this).text(anagrammedName(currName));
+}
+
 /*
  * Function that is called when the document is ready.
  */
